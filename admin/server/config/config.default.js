@@ -31,7 +31,7 @@ module.exports = appInfo => {
       underscored: true,
       freezeTableName: true,
       charset: 'utf8mb4',
-    }
+    },
   };
 
   // add your middleware config here

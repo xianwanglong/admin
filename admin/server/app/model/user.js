@@ -24,7 +24,7 @@ module.exports = app => {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        isIn: [[1, 2, 3]],
+        isIn: [[ 1, 2, 3 ]],
       },
     },
   }, {
@@ -34,4 +34,4 @@ module.exports = app => {
   });
 
   return User;
-}
+};
