@@ -26,7 +26,7 @@ module.exports = appInfo => {
     host: 'localhost',
     port: '3306',
     username: 'root',
-    password: 'root',
+    password: 'long206279',
     define: {
       underscored: true,
       freezeTableName: true,
