@@ -4,33 +4,36 @@ const Sequelize = require('sequelize');
 
 module.exports = app => {
   const { STRING, INTEGER, DataTypes } = Sequelize;
-  const User = app.model.define('user', {
+
+  const GameList = app.model.define('gameList', {
     id: {
       type: INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    name: {
       type: STRING(32),
       allowNull: false,
     },
-    password: {
-      type: STRING,
+    age: {
+      type: INTEGER,
       allowNull: false,
     },
-    avatar: STRING,
-    user_type: {
+    sex: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        isIn: [[ 1, 2, 3 ]],
+        isIn: [[ 0, 1 ]],
       },
+    },
+    address: {
+      type: STRING,
+      allowNull: false,
     },
   }, {
     timestamps: true,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
   });
-
-  return User;
+  return GameList;
 };

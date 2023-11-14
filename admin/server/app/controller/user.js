@@ -9,6 +9,15 @@ class LoginController extends Controller {
     const { ctx } = this;
     const { username, password } = ctx.query;
 
+    if (!username || !password) {
+      ctx.status = 400;
+      ctx.body = {
+        code: 400,
+        message: '缺少用户名或密码',
+      };
+      return;
+    }
+
     try {
       const User = ctx.model.User;
       const modelName = await User.findOne({ where: { username } });

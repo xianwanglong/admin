@@ -19,6 +19,7 @@ module.exports = appInfo => {
   };
 
   config.keys = appInfo.name + '_1694680669350_1102';
+  config.middleware = 'tokenAuth';
 
   config.sequelize = {
     dialect: 'mysql',
