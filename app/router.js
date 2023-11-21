@@ -9,4 +9,5 @@ module.exports = app => {
   router.post('/login', controller.user.login);
   router.post('/register', controller.user.register);
   router.post('/gameList/creatList', tokenAuth, controller.gameList.creatList);
+  router.post('/goodsList/creatList', tokenAuth, controller.goodsList.creatList);
 };
